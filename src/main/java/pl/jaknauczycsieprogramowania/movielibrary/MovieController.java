@@ -44,7 +44,7 @@ public class MovieController {
     }
 
     @PatchMapping("/{id}")
-    public int partiallyUpdate(@PathVariable("id") int id, @RequestBody Movie updatedMovie) {
+    public int updateSelected(@PathVariable("id") int id, @RequestBody Movie updatedMovie) {
         Movie movie = movieRepository.getById(id);
 
         if (movie != null) {
